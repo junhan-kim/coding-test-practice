@@ -1,6 +1,5 @@
 # coding-test-practice
 
-<format>
   1. source of question
   2. code
   3. related grammar
