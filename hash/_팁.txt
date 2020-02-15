@@ -1,3 +1,4 @@
-1. 존재 여부를 판단할때는 value : boolean
+1. 존재 여부를 판단할때는 value : boolean   
+     // 또는 m.find(key) == m.end()   -> not found
    1대1 매칭할때는 value : string
    갯수를 셀 때는 value : int
