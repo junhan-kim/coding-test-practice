@@ -1,0 +1,32 @@
+[문제] https://programmers.co.kr/learn/courses/30/lessons/42579
+[유형] map
+[풀이]
+ 1. map의 key : 장르, value : 플레이 수
+    value 내림차순 정렬
+ 2. map의 keys를 반복 내에서 genres 반복
+    만약 key == genre 이면, idx_play map의 key : 인덱스, 플레이 수
+    value 다르면 value 내림차순, 같으면 key 오름차순 정렬
+
+    answer.push_back(idx_play->first) 를 두 번만
+
+[주요 기능]
+  sort(시작 주소, 끝 주소, [비교 함수])  // 기본은 오름차순
+   ex) sort(m.begin(), m.end(), compare);
+
+  비교함수(comparator)
+  ex) bool compare(const int &a, const int &b){  // 단일 값 비교
+        return a < b;  // 오름차순.  내림차순이면 a > b
+      }
+      bool compare(const pair<K, V> &a, const pair<K, V> &b){  // 이 경우는 각 pair끼리 비교 (객체끼리 비교도 가능)
+        return a.second != b.second?  a.second > b.second : a.first < b.first;  // a와 b의 value가 다르면 value 내림차순, 같으면 key 오름차순
+      }
+
+[에러]
+1. map은 자체 정렬이 안되므로 vector로 변환하여 정렬해야 한다.. 그리고 다시 map으로 복구시킬 필요는 없다.
+   1) 먼저 vector를 기존 map으로 초기화 시키고,  // vector<pair<string, int>> v(m.begin(), m.end());
+   2) 그 vector를 compare로 sort 한 뒤,  // sort(v.begin(), v.end(), compare);
+   이후에는 계속 그 vector를 쓰면 된다.
+
+[헤더]
+ sort -> algorithm
+ pair -> utility
