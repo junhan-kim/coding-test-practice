@@ -1,0 +1,16 @@
+[문제] https://programmers.co.kr/learn/courses/30/lessons/42576
+[유형] map, set
+[풀이]
+ 1. map으로 푸는 법 : 
+  일단 participant의 key는 각 string, value는 0으로 초기화하고, 다시 돌면서 각 string에 해당하는 value를 1씩 증가
+  그리고 completion을 돌면서 각 string에 해당하는 value를 1씩 감소
+  마지막으로 map을 돌면서 value가 1인 key를 반환
+ 2. set으로 푸는 법 : 차집합 사용 (algorithm.h)
+
+ 이 중 1번을 채택하였다. 
+
+[에러]
+1. boolean -> bool
+2. null -> NULL
+3. map 내에서 key의 존재 여부를 판단할때 m[elem] != NULL 은 사용하지 말 것  -> 그냥 키의 존재 여부를 판단하는 방식 자체를 쓰지 말것
+4. first나 second는 readonly임..  m[key] 는 value 이므로  m[key]++ 식으로 value 변경
