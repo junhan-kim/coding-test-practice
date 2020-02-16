@@ -1,0 +1,25 @@
+[문제] https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh&categoryId=AV134DPqAA8CFAYh&categoryType=CODE
+[유형] 구현
+[풀이]
+ 조경권 : priv
+ comp[4] = {i-1,i-2,i+1,i+2}  
+ '한 개라도' 만족을 못하면 false이므로 -> 어떤 한 개에 의존적인 조건.   한 개 -> max 값
+ 초기화 유의, 경계 조건 유의
+ 그 값과 비교했을때 우위를 점해야함 -> 빼기 연산   // 단순 거리, 차 구하기였으면 abs 사용
+ 
+ i - comp.max() = priv.  (if priv < 0, priv = 0)
+
+[주요 기능]
+ int min = *min_element(v.begin(), v.end());
+ int max = *max_element(v.begin(), v.end());
+
+[에러]
+ SWEA 처음 써서 input 포맷이 너무 헷갈렸음.
+ T는 테스트 케이스 갯수고 반복문안에서 각 테스트케이스에 대한 로직 짜면 됨.
+
+ 별도로 내장된 코드가 없고 눈에 보이는 코드가 전부임.
+ 그 말은 즉, 내가 T = 10이라 해놓으면 테스트 케이스가 10개만 돌아가게 할 수도 있고,
+ 전체 테스트 케이스 갯수부터 각 테스트 케이스의 길이, 테스트 케이스에 들어가는 값의 input, output들을 모두 내가 처리해주어야 함.
+
+[헤더]
+ algorithm
