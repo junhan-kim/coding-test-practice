@@ -5,12 +5,12 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-	int test_case;
-	int T;
-	T = 10;
+  int test_case;
+  int T;
+  T = 10;
   int len, num
-	for(test_case = 1; test_case <= T; ++test_case)
-	{
+  for(test_case = 1; test_case <= T; ++test_case)
+  {
     cin>>len; 
     vector<int> v(len);
 
@@ -35,6 +35,6 @@ int main(int argc, char** argv)
     }
 
     cout << '#' << test_case << ' ' << sum << endl;
-	}
-	return 0;
+  }
+  return 0;
 }
