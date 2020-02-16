@@ -1,25 +1,25 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int main(int argc, char** argv)
 {
-  int test_case;
-  int T;
-  T = 10;
-  for(test_case = 1; test_case <= T; ++test_case)
+	int test_case;
+	int T;
+	T = 10;
+  int len, num
+	for(test_case = 1; test_case <= T; ++test_case)
 	{
-    int len;
     cin>>len; 
     vector<int> v(len);
+
     for(int i = 0; i < len; i++)
     {
-        int num;
         cin >> num;
         v[i] = num;
     }
+
     int sum = 0;
     for(int i = 0; i < len; i++){
         vector<int> comp(4);
@@ -33,6 +33,7 @@ int main(int argc, char** argv)
         if(priv < 0) priv = 0;
         sum += priv;
     }
+
     cout << '#' << test_case << ' ' << sum << endl;
 	}
 	return 0;
