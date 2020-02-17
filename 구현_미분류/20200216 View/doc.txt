@@ -1,0 +1,17 @@
+[문제] https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh&categoryId=AV134DPqAA8CFAYh&categoryType=CODE
+[유형] 구현
+[풀이]
+ 조경권 : priv
+ comp[4] = {i-1,i-2,i+1,i+2}  
+ '한 개라도' 만족을 못하면 false이므로 -> 어떤 한 개에 의존적인 조건.   한 개 -> max 값
+ 초기화 유의, 경계 조건 유의
+ 그 값과 비교했을때 우위를 점해야함 -> 빼기 연산   // 단순 거리, 차 구하기였으면 abs 사용
+ 
+ i - comp.max() = priv.  (if priv < 0, priv = 0)
+
+[주요 기능]
+ int min = *min_element(v.begin(), v.end());
+ int max = *max_element(v.begin(), v.end());
+
+[헤더]
+ algorithm
