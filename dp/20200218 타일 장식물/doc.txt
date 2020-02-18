@@ -1,0 +1,16 @@
+[문제] https://programmers.co.kr/learn/courses/30/lessons/43104
+[유형] dp
+[풀이]
+ // dp의 가장 기본이 되는 문제라고 볼 수 있다.
+ round(tile) = round(tile-1) + fac(tile)*2
+
+[주요 기능]
+ memset(포인터, 초기화값, 크기)
+
+[에러]
+ 겉으로는 효율성때문에 에러뜨는 것처럼 보였음
+ 그러나 실제로는 타입의 문제. 
+ 출제자가 long long으로 answer 타입을 주어서 암시를 했음에도 int로 처리를 한 실수이다.
+
+[헤더]
+ string.h -> memset
