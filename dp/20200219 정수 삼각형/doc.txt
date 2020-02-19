@@ -1,0 +1,13 @@
+[문제] https://programmers.co.kr/learn/courses/30/lessons/43105
+[유형] dp
+[풀이]
+ sum[h][r] = triangle[h][r] + max(cal(h-1,r-1)+cal(h-1,r))  // 양 가장자리는 부모가 왼쪽, 오른쪽 중 하나이므로 별도 처리
+[주요 기능]
+ 다차원 vector 초기화
+ vector<vector<int>> v;
+ v.assign(N, vector<int>(N, -1);
+
+[에러]
+ 1. 다차원 vector 초기화 관련 에러 
+ 2. memo = 현재값 + 재귀  형태로 해야 하는데, memo = 현재값 + memo로 해서 에러
+ 
